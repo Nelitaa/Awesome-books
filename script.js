@@ -26,25 +26,30 @@ for (let i=0; i<books.length; i += 1) {
 
 addBooks.addEventListener('click', (e) => {
   e.preventDefault();
+  
   const bookTitle = document.getElementById('title').value;
   const bookAuthor = document.getElementById('author').value;
 
   books.push({"title" : bookTitle, "author" :bookAuthor});
+  localStorage.setItem('books', JSON.stringify(books))
 
-  const title = document.createElement("p");
-  title.textContent = bookTitle;
-  divSectionBooks.appendChild(title);
+  const bookAdded = JSON.parse(localStorage.getItem('books'));
   
-  const author = document.createElement("p");
-  author.textContent = bookAuthor;
-  divSectionBooks.appendChild(author);
-  
-  const buttonRemove = document.createElement("button");
-  buttonRemove.textContent = "Remove";
-  divSectionBooks.appendChild(buttonRemove);
-  
-  const hr = document.createElement("hr");
-  divSectionBooks.appendChild(hr);
-  
+  console.log(bookAdded)
 
-})
+  // bookAdded.appendChild(books)
+    const title = document.createElement("p");
+    title.textContent = bookTitle;
+    divSectionBooks.appendChild(title);
+
+    const author = document.createElement("p");
+    author.textContent = bookAuthor;
+    divSectionBooks.appendChild(author);
+
+    const buttonRemove = document.createElement("button");
+    buttonRemove.textContent = "Remove";
+    divSectionBooks.appendChild(buttonRemove);
+
+    const hr = document.createElement("hr");
+    divSectionBooks.appendChild(hr);
+  })
