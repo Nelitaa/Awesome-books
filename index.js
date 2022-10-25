@@ -65,8 +65,8 @@ const init = () => {
 
     books.push(newBook);
     createBook(newBook);
-    titleInput.value = "";
-    authorInput.value = "";
+    titleInput.value = '';
+    authorInput.value = '';
   });
 };
 init();
