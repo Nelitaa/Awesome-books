@@ -1,0 +1,17 @@
+body {
+  width: 50vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25vh;
+}
+
+input {
+  margin-bottom: 5%;
+}
+
+button {
+  max-width: max-content;
+}

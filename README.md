@@ -2,49 +2,32 @@
 
 # Project Name
 
-> Description the project.
-
+> We build a basic website that allows users to add/remove books from a list. We did that by using JavaScript objects and arrays. Also we dynamically modify the DOM and add basic events.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+- HTML
+- CSS
+- Javascript
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get a local copy up and running follow these simple example steps:
 
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+-Open up Github.
+-Clone this repository from GitHub by copying the HTTPS address. Write: git clone https://github.com/Nelitaa/Awesome-books.git
+-On your VSCode hit "Open a new repository" and paste the URL.
+-Select the destination folder. Write: cd Portfolio
+-All the files should be cloned to your local folder and are ready to be used.
+-Write: npm install
 
 ## Authors
 
-👤 **Author1**
+👤 **Marianela Muñoz Gutierrez**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Nelitaa](https://github.com/Nelitaa)
+- Twitter: [@MarianelaMunoz\_](https://twitter.com/MarianelaMunoz_)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/marianela-muñoz-gutierrez/)
 
 👤 **Author2**
 
@@ -64,12 +47,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse
 
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
