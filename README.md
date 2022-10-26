@@ -2,7 +2,7 @@
 
 # Project Name
 
-> We build a basic website that allows users to add/remove books from a list. We did that by using JavaScript objects and arrays. Also we dynamically modify the DOM and add basic events.
+> "Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list. We use JavaScript classes.
 
 ## Built With
 
@@ -29,11 +29,11 @@ To get a local copy up and running follow these simple example steps:
 - Twitter: [@MarianelaMunoz\_](https://twitter.com/MarianelaMunoz_)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/marianela-muñoz-gutierrez/)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Khomotso Mkansi**
+
+- GitHub: [@githubhandle](https://github.com/momotsow)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/khomotso-prudence-mkansi-aa7794b7/)
 
 ## 🤝 Contributing
 
