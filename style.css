@@ -78,7 +78,7 @@ input {
 .button {
   width: 200px;
 }
-/* nav */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -128,4 +128,3 @@ footer {
 .contactLi {
   padding-left: 10%;
 }
-
