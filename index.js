@@ -82,3 +82,41 @@ const init = () => {
 };
 
 init();
+
+const currentDate = new Date().toLocaleString();
+document.getElementById('current-date').innerHTML = currentDate;
+
+// display the books list when click the button "List"
+const allBooksList = document.querySelector('.books');
+const listBtn = document.querySelector('.listBtn');
+const contactBtn = document.querySelector('.contact');
+const contactInfo = document.querySelector('.contact-info');
+const addBooks = document.querySelector('#addBooks');
+
+listBtn.addEventListener('click', () => {
+  allBooksList.style.display = 'block';
+  addBooks.style.display = 'none';
+});
+
+window.addEventListener('load', () => {
+  allBooksList.style.display = 'block';
+  addBooks.style.display = 'none';
+  contactInfo.style.display = 'none';
+});
+
+// display the Add book form  when click the button "Add new"
+const addNewBtn = document.querySelector('.add-new-btn');
+
+addNewBtn.addEventListener('click', () => {
+  allBooksList.style.display = 'none';
+  addBooks.style.display = 'block';
+  contactInfo.style.display = 'none';
+});
+
+// display the contact details  when click the button "Contact"
+
+contactBtn.addEventListener('click', () => {
+  allBooksList.style.display = 'none';
+  addBooks.style.display = 'none';
+  contactInfo.style.display = 'block';
+});
