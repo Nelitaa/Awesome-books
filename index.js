@@ -1,72 +1,84 @@
-// Funcion inicializadora previene hackeo de codigo js
+class Books {
+  constructor() {
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
+  }
+
+  getQuantity() {
+    return this.books.length;
+  }
+
+  toJSON() {
+    return {
+      id: this.id,
+      title: this.title,
+      name: this.name,
+    };
+  }
+
+  renderBooks() {
+    const allBooks = document.getElementById('allBooks');
+    // delete current books
+    while (allBooks.firstChild) {
+      allBooks.removeChild(allBooks.firstChild);
+    }
+    // render new books
+    this.books.map((book) => {
+      const bookList = document.createElement('li');
+      bookList.setAttribute('id', book.id);
+      allBooks.appendChild(bookList);
+
+      const bookName = document.createElement('p');
+      bookName.textContent = `${book.title} by ${book.author}`;
+      bookList.appendChild(bookName);
+
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+      removeButton.classList.add('remove');
+      bookList.appendChild(removeButton);
+
+      return bookList;
+    });
+  }
+
+  addBook(title, author) {
+    // get last id
+    const lastId = this.books.length ? this.books[this.books.length - 1].id : 0;
+    const book = { id: lastId + 1, title, author };
+    this.books.push(book);
+    localStorage.setItem('books', JSON.stringify(this.books));
+    this.renderBooks();
+  }
+
+  removeBook(id) {
+    this.books = this.books.filter((book) => book.id !== id);
+    localStorage.setItem('books', JSON.stringify(this.books));
+    this.renderBooks();
+  }
+}
+
 const init = () => {
-  // Referencias al DOM
-  const sectionBook = document.querySelector('#section-books');
+  const submitForm = document.querySelector('form');
   const titleInput = document.querySelector('#title');
   const authorInput = document.querySelector('#author');
-  const submitForm = document.querySelector('form');
-  let divBook;
-  let idBookCollection = 2; // We already have two books loaded
-
-  let books = JSON.parse(localStorage.getItem('books'))
-  || [{ id: 0, title: 'The Great Gatsby', author: 'F. Scott Fitzgerald' },
-    { id: 1, title: 'The Catcher in the Rye', author: 'J. D. Salinger' }];
-
-  function removeBook(id) {
-    const newBooks = [];
-    const divBookDelete = document.getElementById(id);
-    sectionBook.removeChild(divBookDelete);
-    books.forEach((book) => {
-      if (book.id !== id) {
-        newBooks.push(book);
-      }
-    });
-    books = [...newBooks];
-    localStorage.setItem('books', JSON.stringify(books));
+  const books = new Books();
+  if (books.getQuantity() === 0) {
+    books.addBook('The Great Gatsby', 'J.R.R. Tolkien');
+    books.addBook('The Catcher in the Rye', 'J. D. Salinger');
   }
-
-  function createBook(newBook) {
-    const title = document.createElement('p');
-    const author = document.createElement('p');
-    const buttonRemove = document.createElement('button');
-    const hr = document.createElement('hr');
-
-    title.textContent = newBook.title;
-    author.textContent = newBook.author;
-    buttonRemove.textContent = 'Remove';
-    buttonRemove.classList = 'btn';
-    buttonRemove.id = newBook.id;
-    buttonRemove.onclick = () => {
-      removeBook(newBook.id);
-    };
-
-    divBook = document.createElement('div');
-    divBook.id = newBook.id;
-    divBook.appendChild(title);
-    divBook.appendChild(author);
-    divBook.appendChild(buttonRemove);
-    divBook.appendChild(hr);
-
-    sectionBook.appendChild(divBook);
-
-    localStorage.setItem('books', JSON.stringify(books));
-  }
-
-  books.forEach((createBook));
-
+  books.renderBooks();
+  // add book event
   submitForm.addEventListener('submit', (event) => {
     event.preventDefault();
-
-    const newBook = {
-      id: idBookCollection += 1,
-      title: titleInput.value,
-      author: authorInput.value,
-    };
-
-    books.push(newBook);
-    createBook(newBook);
+    books.addBook(titleInput.value, authorInput.value);
     titleInput.value = '';
     authorInput.value = '';
   });
+  // remove book event
+  document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove')) {
+      books.removeBook(parseInt((event.target.parentElement.id), 10));
+    }
+  });
 };
+
 init();
