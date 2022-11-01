@@ -6,7 +6,7 @@ nav {
   padding-right: 5%;
 }
 
-.navList{
+.navList {
   display: flex;
   align-items: center;
   list-style: none;
@@ -17,10 +17,9 @@ nav {
 
 .navListLi {
   padding-right: 10%;
-
 }
 
-.navListEach{
+.navListEach {
   text-decoration: none;
   color: #000;
   cursor: pointer;
@@ -47,7 +46,7 @@ h2 {
   padding-top: 5%;
 }
 
-#bookList {
+#bookListUl {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,11 +54,11 @@ h2 {
   padding: 0;
 }
 
-#bookList li:nth-child(odd) {
+#bookListUl li:nth-child(odd) {
   background: rgb(215, 214, 214);
 }
 
-#bookList li:nth-child(even) {
+#bookListUl li:nth-child(even) {
   background: #fff;
 }
 

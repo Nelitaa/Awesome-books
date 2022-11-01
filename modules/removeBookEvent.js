@@ -1,11 +1,9 @@
-import { Books } from './BooksClass.js';
-
-export const removeBookEvent = () => {
-  const books = new Books();
-  
+const removeBookEvent = (books) => {
   document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('remove')) {
-    books.removeBook(parseInt((event.target.parentElement.id), 10));
-  }
+    if (event.target.classList.contains('remove')) {
+      books.removeBook(parseInt((event.target.parentElement.id), 10));
+    }
   });
-}
+};
+
+export default removeBookEvent;

@@ -1,11 +1,7 @@
-import { Books } from './BooksClass.js';
-
-export const AddBookEvent = () => {
-
+const AddBookEvent = (books) => {
   const submitForm = document.querySelector('form');
   const titleInput = document.querySelector('#title');
   const authorInput = document.querySelector('#author');
-  const books = new Books();
 
   submitForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -13,4 +9,6 @@ export const AddBookEvent = () => {
     titleInput.value = '';
     authorInput.value = '';
   });
-}
+};
+
+export default AddBookEvent;

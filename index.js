@@ -1,8 +1,8 @@
-import { setRoutes } from './modules/routes.js';
-import { date } from './modules/currentTime.js';
-import { Books } from './modules/BooksClass.js';
-import { AddBookEvent} from './modules/addBookEvent.js';
-import { removeBookEvent} from './modules/removeBookEvent.js';
+import './modules/routes.js';
+import './modules/currentTime.js';
+import Books from './modules/BooksClass.js';
+import AddBookEvent from './modules/AddBookEvent.js';
+import removeBookEvent from './modules/removeBookEvent.js';
 
 const init = () => {
   const books = new Books();
@@ -11,11 +11,8 @@ const init = () => {
     books.addBook('The Catcher in the Rye', 'J. D. Salinger');
   }
   books.renderBooks();
-  AddBookEvent();
-  removeBookEvent();
-  books.renderBooks();
-  setRoutes();
-  date;
+  AddBookEvent(books);
+  removeBookEvent(books);
 };
 
 init();
