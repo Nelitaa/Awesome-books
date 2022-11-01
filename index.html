@@ -4,46 +4,47 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awsome Books</title>
-  <link rel="stylesheet" href="./style.css">
+  <title>Awesome Books with ES6</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <header>
     <nav>
-      <p class="logo">AwesomeBooks</p>
-      <ul>
-        <li class="listBtn">List</li>
-        <li class="add-new-btn">Add new</li>
-        <li class="contact">Contact</li>
+      <h1>Awesome Books</h1>
+      <ul class="navList">
+        <li class="navListLi"><a id="listButton" class="navListEach" href="#listBooks">List</a></li>
+        <li class="navListLi"><a id="addButton" class="navListEach" href="#addBook">Add new</a></li>
+        <li class="navListLi"><a id="contactButton" class="navListEach" href="#contactSection">Contact</a></li>
       </ul>
     </nav>
+    <p id="date"></p>
   </header>
-  <div id="current-date"></div>
-  <section class="books">
-    <h1>All awesome books</h1>
-    <ul id="allBooks"></ul>
-  </section>
-  <hr>
-  <section id="addBooks">
-    <h1>Add a new book</h1>
-    <form>
-      <input type="text" id="title" placeholder="Title">
-      <input type="text" id="author" placeholder="Author">
-      <button class="button" type="submit">Add</button>
-    </form>
-  </section>
-  <section class="contact-info">
-    <h1>Contact information</h1>
-    <p>Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
-    <ul>
-      <li class="contactLi">Our e-mail:  mail@mail.com</li>
-      <li class="contactLi">Our phone number:   004789009876509876</li>
-      <li class="contactLi">Our address: Streetnone 22, 84503 City, country</li>
-    </ul>
-  </section>
+  <main>
+    <section id="listBooks">
+      <h2>All awesome Books</h2>
+      <ul id="bookListUl"></ul>
+    </section>
+    <section id="addBook">
+      <h2>Add a new book</h2>
+      <form>
+        <input type="text" name="title" id="title" placeholder="Title">
+        <input type="text" name="author" id="author" placeholder="Author">
+        <button id="buttonAdd" type="submit">Add</button>
+      </form>
+    </section>
+    <section id="contactSection">
+      <h2>Contact information</h2>
+      <p>Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
+      <ul>
+        <li>Our email: mail@mail.com</li>
+        <li>Our phone number: 009876543456789</li>
+        <li>Our address: Streetname 22, 34567 City, Country</li>
+      </ul>
+    </section>
+  </main>
   <footer>
-    <p>Copyright ...</p>
+    <p class="footerText">Copyright...</p>
   </footer>
-  <script src="index.js"></script>
+  <script type="module" src="./index.js"></script>
 </body>
 </html>
