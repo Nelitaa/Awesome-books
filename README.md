@@ -30,11 +30,6 @@ To get a local copy up and running follow these simple example steps:
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/marianela-muñoz-gutierrez/)
 
 
-👤 **Khomotso Mkansi**
-
-- GitHub: [@githubhandle](https://github.com/momotsow)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/khomotso-prudence-mkansi-aa7794b7/)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
